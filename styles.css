@@ -3,165 +3,240 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  box-sizing: border-box;
+  background-color: #e0f7fa; /* Light blue background */
+  color: #333;
 }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
+h1, h2, h3 {
+  color: #00796b; /* Dark teal for headings */
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  flex-wrap: wrap;
-}
-
-nav .logo h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
+a {
+  color: #0288d1; /* Soft blue for links */
   text-decoration: none;
-  font-size: 1rem;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 section {
-  padding: 50px 20px;
+  padding: 60px 0;
 }
 
-.container {
-  max-width: 1000px;
+/* Header */
+header {
+  background-color: #80deea; /* Soft light blue background */
+  color: #00796b; /* Dark teal for text */
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #00796b;
+  font-weight: 500;
+}
+
+header nav ul li a:hover {
+  color: #004d40; /* Darker teal on hover */
+}
+
+/* About Section */
+#about p {
+  font-size: 18px;
+  text-align: center;
+}
+
+#about .container {
+  max-width: 800px;
   margin: 0 auto;
 }
 
-h2 {
-  font-size: 2rem;
-  color: #333;
+#about a {
+  color: #0288d1;
+}
+
+/* Projects Section */
+#projects .card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #ffffff; /* White background for cards */
+}
+
+#projects .card:hover {
+  transform: translateY(-10px);
+}
+
+#projects h2 {
   text-align: center;
+  margin-bottom: 30px;
+  color: #00796b;
 }
 
-.project, .job {
-  background-color: white;
-  padding: 20px;
+#projects .card-body h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #00796b;
+}
+
+#projects .card-body h6 {
+  font-size: 1rem;
+  color: #00796b;
+  margin-bottom: 15px;
+}
+
+#projects .card-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#projects .card-body ul li {
+  margin-bottom: 10px;
+}
+
+#projects .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#projects .col-md-6 {
   margin-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.project h3, .job h3 {
-  font-size: 1.6rem;
-  color: #333;
+@media (max-width: 768px) {
+  #projects .col-md-6 {
+    width: 100%;
+  }
 }
 
+/* Experience Section */
+#experience .card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+#experience .card-body h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #00796b;
+}
+
+#experience .card-body h6 {
+  font-size: 1rem;
+  color: #00796b;
+  margin-bottom: 15px;
+}
+
+#experience .card-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#experience .card-body ul li {
+  margin-bottom: 10px;
+}
+
+#experience .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#experience .col-md-6 {
+  margin-bottom: 20px;
+}
+
+/* Tools Section */
+#tools {
+  background-color: #b2ebf2; /* Light blue background */
+}
+
+#tools h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #00796b;
+}
+
+#tools .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#tools .col-md-2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#tools i {
+  font-size: 3rem;
+  color: #00796b; /* Dark teal for icons */
+}
+
+#tools p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #00796b;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  position: fixed;
+  background-color: #00796b; /* Dark teal footer */
+  color: #ffffff;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Make sure that the footer doesn't push content down */
+footer {
+  position: relative;
   bottom: 0;
   width: 100%;
 }
 
-/* Override Bootstrap default styles where needed */
-
-/* Custom Nav Styles */
-nav ul li a {
-  font-size: 1rem;
-}
-
-nav .logo h1 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/* Section and Content Styling */
-h2 {
-  font-size: 2rem;
-  color: #333;
-}
-
-/* For smaller screens */
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+  header .nav ul {
     display: block;
-    margin-top: 10px;
+    text-align: center;
   }
 
-  nav ul li {
-    margin: 5px 0;
+  header nav ul li {
+    display: block;
+    margin-bottom: 10px;
   }
 
-  .container {
-    padding: 20px;
+  header .logo {
+    text-align: center;
   }
 
-  section {
-    padding: 40px 10px;
+  #tools .col-md-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .project, .job {
-    padding: 15px;
-  }
-
-  .project h3, .job h3 {
-    font-size: 1.4rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  nav .logo h1 {
-    font-size: 1.5rem;
-  }
-
-  nav ul li {
-    font-size: 0.9rem;
-  }
-
-  .container {
-    padding: 10px;
-  }
-
-  section {
-    padding: 30px 10px;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .project, .job {
-    padding: 10px;
-  }
-
-  .project h3, .job h3 {
-    font-size: 1.2rem;
+  #tools .col-md-2 i {
+    font-size: 2.5rem;
   }
 }
