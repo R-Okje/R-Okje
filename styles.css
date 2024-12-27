@@ -17,6 +17,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  flex-wrap: wrap;
 }
 
 nav .logo h1 {
@@ -29,6 +30,7 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -53,6 +55,7 @@ section {
 h2 {
   font-size: 2rem;
   color: #333;
+  text-align: center;
 }
 
 .project, .job {
@@ -76,4 +79,89 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+/* Override Bootstrap default styles where needed */
+
+/* Custom Nav Styles */
+nav ul li a {
+  font-size: 1rem;
+}
+
+nav .logo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Section and Content Styling */
+h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+/* For smaller screens */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    display: block;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  section {
+    padding: 40px 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .project, .job {
+    padding: 15px;
+  }
+
+  .project h3, .job h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul li {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  section {
+    padding: 30px 10px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .project, .job {
+    padding: 10px;
+  }
+
+  .project h3, .job h3 {
+    font-size: 1.2rem;
+  }
 }
